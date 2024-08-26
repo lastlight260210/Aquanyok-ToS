@@ -15,39 +15,43 @@
             align-items: center;
             height: 100vh;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border: 2px solid #000;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .scroll-container {
             position: relative;
+            width: 80%;
+            max-width: 900px;
+            background: #fefefe;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
             overflow: hidden;
+            margin: 20px;
         }
-        .container::before, .container::after {
+        .scroll-container::before,
+        .scroll-container::after {
             content: '';
             position: absolute;
-            width: 30px;
-            height: 30px;
-            background: #000;
-            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            background: url('https://www.example.com/scroll-corner.png') no-repeat center center;
+            background-size: cover;
         }
-        .container::before {
-            top: -15px;
-            left: -15px;
+        .scroll-container::before {
+            top: 0;
+            left: 0;
+            transform: rotate(-45deg);
+            transform-origin: top left;
         }
-        .container::after {
-            bottom: -15px;
-            right: -15px;
+        .scroll-container::after {
+            bottom: 0;
+            right: 0;
+            transform: rotate(45deg);
+            transform-origin: bottom right;
         }
-        .scroll {
-            background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0) 80%);
-            padding: 20px;
-            overflow: auto;
+        .scroll-content {
             max-height: 600px;
-            position: relative;
+            overflow-y: auto;
+            padding-right: 20px;
         }
         h1, h2, h3 {
             color: #333;
@@ -58,6 +62,7 @@
         }
         p {
             line-height: 1.6;
+            text-align: justify;
         }
         ul {
             margin: 10px 0;
@@ -69,8 +74,8 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="scroll">
+    <div class="scroll-container">
+        <div class="scroll-content">
             <h1>Условия использования Aquanyok</h1>
             <p><strong>Дата вступления в силу: 5 июня 2024 года</strong></p>
             <h2>1. Введение</h2>

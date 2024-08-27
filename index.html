@@ -19,12 +19,13 @@
         .scroll-container {
             width: 80%;
             max-width: 900px;
-            background: url('https://w7.pngwing.com/pngs/944/729/png-transparent-paper-parchment-books-text-background-pattern.png') no-repeat center center;
-            background-size: 100% 100%; /* Изменено для удаления белых краёв */
+            background: url('URL_ИЗОБРАЖЕНИЯ_СВИТКА') no-repeat center center;
+            background-size: 100% 100%; /* Устанавливаем размер свитка по контейнеру */
             padding: 40px 60px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
             overflow: hidden;
-            border-radius: 10px;
+            border-radius: 0; /* Убираем скругление */
+            border: none; /* Убираем рамку */
         }
         .scroll-content {
             max-height: 600px;

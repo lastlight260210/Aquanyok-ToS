@@ -17,46 +17,20 @@
             height: 100vh;
         }
         .scroll-container {
-            position: relative;
             width: 80%;
             max-width: 900px;
-            background: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон для контента */
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            padding: 20px;
+            background: url('https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEyL3Jhd3BpeGVsX29mZmljZV8zMV9waG90b19vZl9hX29sZF9wYXJjaG1lbnRfcGFwZXJfc2Nyb2xsX3NoZWV0YV9iNGM2Y2RiMy0wNWY5LTQ5NzMtOWNlNS1hYWY0ODIyZDJmM2MucG5n.png') no-repeat center center;
+            background-size: cover;
+            padding: 40px 60px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
             overflow: hidden;
-            margin: 20px;
-            /* Добавляем эффект свитка */
-            background-image: url('https://cdn.discordapp.com/attachments/1205860677806198804/1277593497792286721/png-transparent-paper-scroll-paper-miscellaneous-presentation-parchment-thumbnail.png?ex=66cf0caa&is=66cdbb2a&hm=77a4c4964dc2ab749f0704566860788819b3e2176da88168ccff5db5ecbe960b&');
-            background-size: cover;
-            background-position: center;
-        }
-        .scroll-container::before,
-        .scroll-container::after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background: url('https://www.example.com/scroll-corner.png') no-repeat center center;
-            background-size: cover;
-        }
-        .scroll-container::before {
-            top: 0;
-            left: 0;
-            transform: rotate(-45deg);
-            transform-origin: top left;
-        }
-        .scroll-container::after {
-            bottom: 0;
-            right: 0;
-            transform: rotate(45deg);
-            transform-origin: bottom right;
+            border-radius: 10px;
         }
         .scroll-content {
             max-height: 600px;
             overflow-y: auto;
             padding-right: 20px;
+            color: #333; /* Цвет текста, который хорошо сочетается с фоном свитка */
         }
         h1, h2, h3 {
             color: #333;
